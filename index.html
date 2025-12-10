@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lowongan Live Host & Dancer - Jakarta Pusat</title>
+    <title>Open Recruitment Live Host & Dancer - Nova Sky Media</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Konfigurasi Tailwind untuk font Inter -->
+    <!-- Konfigurasi Tailwind untuk font Inter dan Skema Warna Nova Sky Media -->
     <script>
         tailwind.config = {
             theme: {
@@ -15,9 +15,10 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary': '#FF6B6B', // Warna Merah Muda yang Cerah
-                        'secondary': '#4A4E69', // Warna Ungu Tua/Abu-abu untuk teks
-                        'bg-dark': '#1C1C28',
+                        'primary': '#0A3D62', // Biru Tua (Navy) - Warna Utama Merek
+                        'secondary': '#00A8E8', // Biru Cerah - Highlight/Aksen
+                        'bg-dark': '#101F33', // Biru Sangat Tua - Background Gelap
+                        'text-light': '#E0E7FF',
                     }
                 }
             }
@@ -26,75 +27,154 @@
     <style>
         /* Custom CSS untuk efek bayangan dan gradien yang lebih dalam */
         .hero-bg {
-            background: linear-gradient(135deg, #1C1C28 0%, #053288 100%);
+            /* Gradien yang lebih dalam dan menarik */
+            background: linear-gradient(145deg, #101F33 0%, #1A3A5B 70%, #0A3D62 100%);
+            /* Menambahkan sedikit tekstur bayangan pada background */
+            box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.2);
         }
         .btn-primary {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 150, 195);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 6px 15px rgba(0, 168, 232, 0.5); /* Bayangan lebih kuat */
         }
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(46, 150, 195);
-            background-color: #4a77f1;
+            transform: translateY(-4px); /* Efek 'lift' lebih jelas */
+            box-shadow: 0 12px 25px rgba(0, 168, 232, 0.7);
+            background-color: #00BFFF;
+        }
+        /* Efek hover yang ditingkatkan untuk Card (Benefit dan Portfolio) */
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(16, 31, 51, 0.15); /* Bayangan dari warna primary dark */
+            border-color: #00A8E8; /* Border menjadi warna secondary saat hover */
+        }
+        .portfolio-card {
+            min-height: 250px;
+            background-color: #f0f8ff; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #0A3D62;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Tambahkan transisi */
+        }
+        /* Gaya untuk Container Gambar Girlband Baru */
+        .girlband-image-container {
+            border: 4px solid #00A8E8; /* Border tebal warna secondary */
+            box-shadow: 0 10px 30px rgba(0, 168, 232, 0.3); /* Bayangan Biru */
+            aspect-ratio: 16 / 5; /* Rasio lebar dan tinggi untuk tampilan sinematik */
         }
     </style>
 </head>
-<body class="font-sans bg-gray-100 text-secondary">
+<body class="font-sans bg-gray-100 text-primary">
 
     <!-- Header / Hero Section -->
-    <div class="hero-bg py-16 sm:py-24 text-white">
+    <div class="hero-bg py-10 sm:py-16 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Logo dan Nama Perusahaan -->
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <!-- Inline SVG Logo (Warna Biru dan Putih) -->
+                <svg class="w-10 h-10 text-secondary" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M492.3 227.4c-6.8-20.9-26.6-35.1-48.4-35.1H324.9L283 50.7c-7.9-24.3-30.8-40.7-56.7-40.7s-48.8 16.4-56.7 40.7L187.1 192.3H68.1c-21.8 0-41.6 14.2-48.4 35.1s-1.8 45.4 15.1 60.9l95.5 83.9-30.7 125c-5.8 23.7 3.5 48.1 23.9 63.8s51.5 17.5 73.6 3.6L256 462.6l119.5 70.8c22.1 13 48.3 11.5 68.7-4.2s29.7-40.1 23.9-63.8l-30.7-125 95.5-83.9c16.9-15.5 22-40 15.2-60.9zM256 409.6l-85.1-50.5 22.3-91.1-71.5-62.8 93.4-8.2 36.9-106.8 36.9 106.8 93.4 8.2-71.5 62.8 22.3 91.1L256 409.6z"/>
+                </svg>
+                <span class="text-3xl font-bold tracking-wider">Nova Sky Media</span>
+            </div>
+
+            <!-- Judul Utama -->
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
-                Jadilah Bintang <span class="text-primary">Live Host & Dancer</span>
+                Jadilah Bintang <span class="text-secondary">Live Host & Dancer</span>
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Peluang Karir Menarik di Pusat Kota Jakarta!
+            <p class="text-xl sm:text-2xl text-text-light max-w-3xl mx-auto mb-8">
+                Raih Karir Profesional di Platform Live Stream, Berlokasi di **Jakarta Pusat!**
             </p>
             
-            <a href="#application-form" class="btn-primary inline-block bg-primary hover:bg-red-500 text-white font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wider transition duration-300">
+            <a href="https://wa.me/6285878968842" class="btn-primary inline-block bg-secondary hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wider transition duration-300">
                 Lamar Sekarang Juga 🚀
             </a>
-            <p class="mt-4 text-sm text-gray-400">Posisi terbatas! Bergabunglah sebelum 31 Desember 2025.</p>
+            <p class="mt-4 text-sm text-gray-400">Posisi terbatas! Daftarkan diri Anda segera.</p>
         </div>
     </div>
-
+    
+    <!-- NEW: Girlband/Talent Showcase Image Section -->
+    <section class="bg-bg-dark py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="girlband-image-container relative overflow-hidden rounded-xl mx-auto w-full max-w-6xl">
+                <!-- Placeholder Gambar Besar -->
+                <img 
+                    src="https://images.unsplash.com/photo-1761229661497-30a087499566?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Gambar placeholder girlband talent Nova Sky Media" 
+                    class="w-full h-full object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1200x400/0A3D62/00A8E8?text=VISUAL+KAMI+K-POP+VIBE';"
+                >
+                <div class="absolute inset-0 bg-bg-dark/20 flex items-center justify-center">
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Features Section -->
     <section class="py-16 sm:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-bg-dark">Keuntungan Bergabung dengan Kami</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Benefit Bekerja Bersama Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-primary">
-                    <div class="text-4xl text-primary mb-3">
-                        <!-- Icon Bintang (Star) -->
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <div class="interactive-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-secondary/50 hover:border-secondary">
+                    <div class="text-4xl text-secondary mb-3">
+                        <!-- Icon Uang (Dollar/Koin) -->
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-bg-dark">Gaji start 6 Juta - 15 Juta & Komisi Tinggi</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Gapok start 6 Juta + Komisi Tinggi</h3>
                     <p class="text-gray-600">Subsidi mess</p>
-                     <p class="text-gray-600">MUA</p>
-                      <p class="text-gray-600">Coach Dancer
-                      </p>
+                     <p class="text-gray-600">Coach Dancer</p>
+                      <p class="text-gray-600">Mua & Wardobe</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-primary">
-                    <div class="text-4xl text-primary mb-3">
+                <div class="interactive-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-secondary/50 hover:border-secondary">
+                    <div class="text-4xl text-secondary mb-3">
                         <!-- Icon Lokasi (Map Pin) -->
                         <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-bg-dark">Studio di Jakarta Pusat</h3>
-                    <p class="text-gray-600">Bekerja di studio modern dan profesional, lokasi mudah diakses.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Studio Jakarta Pusat</h3>
+                    <p class="text-gray-600">Bekerja di studio modern, nyaman, dan berteknologi tinggi di lokasi yang sangat strategis.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-primary">
-                    <div class="text-4xl text-primary mb-3">
-                        <!-- Icon Fleksibel (Clock) -->
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                <div class="interactive-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-secondary/50 hover:border-secondary">
+                    <div class="text-4xl text-secondary mb-3">
+                        <!-- Icon Pengembangan (Growth) -->
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 00-2 0v4.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM17 4a1 1 0 00-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0v-7.268a2 2 0 000-3.464V4z"/></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-bg-dark">Waktu Kerja Fleksibel</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Training & Popularitas</h3>
+                    <p class="text-gray-600">Dukungan penuh untuk *branding* pribadi, pelatihan *public speaking*, dan strategi *live stream*.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Example Talent Section -->
+    <section class="py-16 sm:py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-primary">Lihat Bintang Kami Beraksi</h2>
+            <p class="text-xl text-center text-gray-600 mb-10">Kami bekerja dengan talenta terbaik. Jadilah bagian dari mereka!</p>
+ <section class="bg-bg-dark py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="girlband-image-container relative overflow-hidden rounded-xl mx-auto w-full max-w-6xl">
+                <!-- Placeholder Gambar Besar -->
+                <img 
+                    src="https://images.unsplash.com/photo-1621976498727-9e5d56476276?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Gambar placeholder girlband talent Nova Sky Media" 
+                    class="w-full h-full object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1200x400/0A3D62/00A8E8?text=VISUAL+KAMI+K-POP+VIBE';"
+                >
+                <div class="absolute inset-0 bg-bg-dark/20 flex items-center justify-center">
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             </div>
         </div>
     </section>
@@ -102,37 +182,37 @@
     <!-- Role Requirements Section -->
     <section class="py-16 sm:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-10 text-bg-dark">Apa yang Kami Cari?</h2>
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-10 text-primary">Kriteria Kandidat Bintang Kami</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg border-2 border-secondary/20">
                 <ul class="space-y-4 text-lg text-gray-700">
                     <li class="flex items-start">
-                        <span class="text-primary text-2xl mr-3 mt-1">&#10003;</span>
+                        <span class="text-secondary text-2xl mr-3 mt-1">&#10003;</span>
                         <div>
-                            <span class="font-semibold text-bg-dark">Percaya Diri & Energik:</span> Nyaman tampil di depan kamera dan mampu membangun interaksi yang hidup.
+                            <span class="font-semibold text-primary">Mempunyai Basic dance </span> 
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-primary text-2xl mr-3 mt-1">&#10003;</span>
+                        <span class="text-secondary text-2xl mr-3 mt-1">&#10003;</span>
                         <div>
-                            <span class="font-semibold text-bg-dark">Bakat Menari (Dancer):</span> 
+                            <span class="font-semibold text-primary">Usia Produktif:</span> Pria/Wanita usia 18-27 tahun, berpenampilan rapi dan menarik.
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-primary text-2xl mr-3 mt-1">&#10003;</span>
+                        <span class="text-secondary text-2xl mr-3 mt-1">&#10003;</span>
                         <div>
-                            <span class="font-semibold text-bg-dark">Usia Produktif:</span> Pria/Wanita usia 18-27 tahun (fleksibel berdasarkan pengalaman).
+                            <span class="font-semibold text-primary">Komunikasi Kuat:</span> Mampu berinteraksi, menghibur, dan menjaga *engagement* penonton.
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-primary text-2xl mr-3 mt-1">&#10003;</span>
+                        <span class="text-secondary text-2xl mr-3 mt-1">&#10003;</span>
                         <div>
-                            <span class="font-semibold text-bg-dark">Domisili Jakarta:</span> Prioritas bagi yang tinggal atau siap bekerja di Jakarta Pusat.
+                            <span class="font-semibold text-primary">Domisili Jakarta & Siap Audisi:</span> Bersedia datang untuk *casting* di studio Jakarta Pusat.
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-primary text-2xl mr-3 mt-1">&#10003;</span>
+                        <span class="text-secondary text-2xl mr-3 mt-1">&#10003;</span>
                         <div>
-                            <span class="font-semibold text-bg-dark">Profesional & Komitmen:</span> Siap menjalani jadwal *live streaming* yang konsisten.
+                            <span class="font-semibold text-primary">Profesionalisme:</span> Berkomitmen pada jadwal *live streaming* dan target yang disepakati.
                         </div>
                     </li>
                 </ul>
@@ -143,25 +223,27 @@
     <!-- Call to Action / Application Form Section -->
     <section id="application-form" class="py-16 sm:py-20 hero-bg text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Siap Mengubah Bakat Menjadi Karir?</h2>
-            <p class="text-xl text-gray-300 mb-10">Kirimkan lamaran Anda sekarang juga dan tunjukkan potensi bintang Anda!</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Jangan Tunda Lagi, Daftarkan Diri Anda!</h2>
+            <p class="text-xl text-text-light mb-10">Tunjukkan potensi Anda dan mulailah karir impian di Nova Sky Media.</p>
 
-            <div class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl text-secondary">
-                <h3 class="text-2xl font-semibold mb-6 text-primary">Hubungi Kami!</h3>
+            <div class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl text-primary">
+                <h3 class="text-2xl font-bold mb-6 text-secondary">Proses Cepat & Mudah</h3>
                 
-                <p class="text-lg mb-6">Untuk melamar, kirimkan data diri lengkap (Nama, Usia, Domisili, Pengalaman Host/Dancer, dan Link Video/Portofolio) ke:</p>
+                <p class="text-lg mb-6 text-gray-700">Kirimkan data diri (Nama, Usia, Domisili, Tb/Bb) ke kontak kami di bawah:</p>
                 
-                <div class="mb-6">
-                    <p class="text-2xl font-bold text-bg-dark mb-2">WhatsApp Rekrutmen:</p>
-                    <a href="https://wa.me/6285878968842" target="_blank" class="text-primary text-3xl font-extrabold hover:underline">(+62) 812 3456 7890</a>
+                <!-- NOMOR WHATSAPP BARU -->
+                <div class="mb-6 border-b pb-4 border-gray-200">
+                    <p class="text-2xl font-bold text-primary mb-2">WhatsApp Rekrutmen:</p>
+                    <a href="https://wa.me/6285878968842" target="_blank" class="text-secondary text-3xl font-extrabold hover:underline">(+62) 858 7896 8842</a>
+                    <p class="text-sm text-gray-500 mt-1">Klik untuk chat langsung dengan HRD kami.</p>
                 </div>
 
                 <div class="mb-6">
-                    <p class="text-2xl font-bold text-bg-dark mb-2">Email HRD:</p>
-                    <a href="mailto:karir@agensijakarta.com" class="text-primary text-xl hover:underline">payumiswari@gmail.com</a>
+                    <p class="text-2xl font-bold text-primary mb-2">Email HRD:</p>
+                    <a href="mailto:karir@novaskymedia.com" class="text-secondary text-xl hover:underline">payumiswari@gmail.com</a>
                 </div>
 
-                <p class="text-sm text-gray-500 mt-6">Kami akan menghubungi kandidat yang memenuhi kualifikasi untuk proses audisi lebih lanjut.</p>
+                <p class="text-sm text-gray-500 mt-6">Kami menjamin proses yang cepat dan rahasia. Hanya kandidat yang lolos screening awal yang akan dihubungi.</p>
             </div>
         </div>
     </section>
@@ -169,16 +251,28 @@
     <!-- Footer -->
     <footer class="bg-bg-dark py-8 text-center text-gray-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2025 Nova Sky Media. Semua Hak Cipta Dilindungi.</p>
-            <p class="text-sm mt-2">Studio Kami: Area Strategis, Jakarta Pusat.</p>
+            <p>&copy; 2025 Nova Sky Media. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Studio Head Office: Jl. Gondangdia Kecil No.14, Cikini, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10330</p>
+       <div class="max-w-xl mx-auto h-64 w-full rounded-xl overflow-hidden border-2 border-secondary shadow-2xl">
+                <!-- Placeholder iframe for Google Maps embed centered roughly on Central Jakarta -->
+                <iframe 
+                    src="https://maps.google.com/maps?q=Jakarta%20Pusat&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="text-xs mt-3 text-gray-400">
+                Peta menunjukkan lokasi umum di Jakarta Pusat. Detail alamat akan diberikan setelah lolos screening.
+            </p>
         </div>
     </footer>
 
-    <!-- Script Placeholder (Placeholder untuk interaksi sederhana jika diperlukan di masa depan) -->
+    <!-- Script for smooth scroll -->
     <script>
-        // JavaScript saat ini tidak digunakan, tetapi bisa ditambahkan untuk validasi formulir atau animasi.
-
-        // Contoh fungsi sederhana untuk scroll ke bagian formulir
         document.querySelector('.btn-primary').addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector('#application-form').scrollIntoView({ 
